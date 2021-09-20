@@ -12,19 +12,19 @@
 
 <body>
     <article>
-        <h1><a href="/post">First Blog Post</a></h1>
+        <h1><a href="/posts/my-first-post">First Blog Post</a></h1>
         
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eaque et perferendis in, omnis libero? Ducimus dolorem pariatur porro maiores facilis aliquam? Sapiente, placeat. Obcaecati unde nostrum, ea, totam iusto architecto recusandae distinctio optio nisi minus blanditiis repellat magnam consequatur beatae nihil cum praesentium aspernatur. Explicabo possimus cum exercitationem minus!
         </p>
         
-        <h1><a href="/post">Second Blog Post</a></h1>
+        <h1><a href="/posts/my-second-post">Second Blog Post</a></h1>
         
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eaque et perferendis in, omnis libero? Ducimus dolorem pariatur porro maiores facilis aliquam? Sapiente, placeat. Obcaecati unde nostrum, ea, totam iusto architecto recusandae distinctio optio nisi minus blanditiis repellat magnam consequatur beatae nihil cum praesentium aspernatur. Explicabo possimus cum exercitationem minus!
         </p>
         
-        <h1><a href="/post">Third Blog Post</a></h1>
+        <h1><a href="/posts/my-third-post">Third Blog Post</a></h1>
 
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eaque et perferendis in, omnis libero? Ducimus dolorem pariatur porro maiores facilis aliquam? Sapiente, placeat. Obcaecati unde nostrum, ea, totam iusto architecto recusandae distinctio optio nisi minus blanditiis repellat magnam consequatur beatae nihil cum praesentium aspernatur. Explicabo possimus cum exercitationem minus!
