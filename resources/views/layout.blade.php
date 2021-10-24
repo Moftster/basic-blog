@@ -8,10 +8,13 @@
     <title>Basic Blog</title>
     
     <link rel="stylesheet" href="app.css">
-    <h1>This is the Header</h1>
 </head>
 
 <body>
+    <header>
+        @yield('header')
+    </header>
+
     @yield('content')
 </body>
 
