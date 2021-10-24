@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Models;
 
@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\File;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
-class Post 
+class Post
 {
     public $title;
 
@@ -15,7 +15,7 @@ class Post
     public $date;
 
     public $body;
-    
+
     public $slug;
 
     public function __construct($title, $excerpt, $date, $body, $slug)
@@ -48,4 +48,14 @@ class Post
         return static::all()->firstWhere('slug', $slug);
     }
 
+    public static function findOrFail($slug)
+    {
+        $post = static::find($slug);
+
+        if (! $post) {
+            throw new ModelNotFoundException();
+        }
+
+        return $post;
+    }
 }

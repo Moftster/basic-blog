@@ -1,7 +1,9 @@
 <x-layout>
-    <h1>{{ $post->title }}</h1>
-
-    <p>{!! $post->body !!}</p>
+    <article>
+        <h1>{{ $post->title }}</h1>
     
-    <a href="/">Go back</a>
+        <p>{!! $post->body !!}</p>
+        
+        <a href="/">Go back</a>
+    </article>
 </x-layout>
