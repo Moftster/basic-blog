@@ -1,10 +1,4 @@
-@extends('layout')
-
-@section('header')
-    <h1>Site Header</h1>
-@endsection
-
-@section('content')
+<x-layout>
     @foreach ($posts as $post)
         <article>
             <h1> 
@@ -18,4 +12,4 @@
             </div>
         </article>
     @endforeach
-@endsection
+</x-layout>
