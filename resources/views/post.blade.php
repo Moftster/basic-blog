@@ -44,7 +44,7 @@
                     </h1>
 
                     <div class="space-y-4 lg:text-lg leading-loose">
-                        {{ $post->content }}
+                        {!! $post->content !!}
                     </div>
                 </div>
             </article>
