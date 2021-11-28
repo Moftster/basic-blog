@@ -20,6 +20,13 @@ class Post extends Model
             $query
                 ->where('title', 'like', '%' . $search . '%')
                 ->orWhere('content', 'like', '%' . $search . '%'));
+
+        $query->when($filters['category'] ?? false, fn ($query, $category) => // the fn is just a fancy way of writing function () {}
+            $query
+                ->whereHas('category', fn($query) =>
+                    $query->where('slug', $category)
+            )
+        );
     }
 
     public function category()
