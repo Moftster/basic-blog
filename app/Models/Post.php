@@ -19,12 +19,20 @@ class Post extends Model
         $query->when($filters['search'] ?? false, fn ($query, $search) => // the fn is just a fancy way of writing function () {}
             $query
                 ->where('title', 'like', '%' . $search . '%')
-                ->orWhere('content', 'like', '%' . $search . '%'));
+                ->orWhere('content', 'like', '%' . $search . '%')
+            );
 
         $query->when($filters['category'] ?? false, fn ($query, $category) => // the fn is just a fancy way of writing function () {}
             $query
                 ->whereHas('category', fn($query) =>
                     $query->where('slug', $category)
+            )
+        );
+
+        $query->when($filters['author'] ?? false, fn ($query, $author) => // the fn is just a fancy way of writing function () {}
+            $query
+                ->whereHas('author', fn($query) =>
+                    $query->where('username', $author)
             )
         );
     }
