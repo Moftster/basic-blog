@@ -17,10 +17,11 @@ class Post extends Model
     public function scopeFilter($query, array $filters) // Post::newQuery()->filter()
     {
         $query->when($filters['search'] ?? false, fn ($query, $search) => // the fn is just a fancy way of writing function () {}
-            $query
-                ->where('title', 'like', '%' . $search . '%')
+            $query->where(fn ($query) =>
+                $query->where('title', 'like', '%' . $search . '%')
                 ->orWhere('content', 'like', '%' . $search . '%')
-            );
+            )
+        );
 
         $query->when($filters['category'] ?? false, fn ($query, $category) => // the fn is just a fancy way of writing function () {}
             $query
