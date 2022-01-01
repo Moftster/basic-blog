@@ -6,7 +6,7 @@
             </h1>
             <form
                 method="POST"
-                action="/sessions"
+                action="/login"
                 class="mt-8"
             >
                 @csrf
