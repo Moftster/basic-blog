@@ -16,6 +16,21 @@ use App\Http\Controllers\SessionsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/ping', function () {
+    $mailchimp = new MailchimpMarketing\ApiClient();
+
+    $mailchimp->setConfig([
+      'apiKey' => config('services.mailchimp.key'),
+      'server' => 'us20'
+    ]);
+
+    $response = $mailchimp->lists->addListMember('06bdfc2037', [
+        'email_address' => 'd_moftakhar@hotmail.com',
+        'status' => 'subscribed'
+    ]);
+
+    ddd($response);
+});
 
 Route::get('/', [PostController::class, 'index'])->name('home');
 
