@@ -46,3 +46,5 @@ Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'
 //         'posts' => $author->posts,
 //     ]);
 // });
+
+Route::get('admin/posts/create', [PostController::class, 'create'])->middleware('admin');
