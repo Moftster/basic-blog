@@ -5,7 +5,7 @@
 
     <textarea
     type="text"
-    class="border border-gray-400 p-2 w-full"
+    class="border border-gray-200 rounded p-2 w-full"
     name="{{ $name }}"
     id="{{ $name }}"
     required
