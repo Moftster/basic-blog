@@ -17,13 +17,9 @@
                 <img src="{{ asset('/storage/' . $post->thumbnail) }}" alt="" class="rounded-xl ml-6" width="100">
             </div>
 
-            <x-form.textarea name="excerpt">
-                {{ old('excerpt', $post->excerpt) }}
-            </x-form.textarea>
+            <x-form.textarea name="excerpt">{{ old('excerpt', $post->excerpt) }}</x-form.textarea>
 
-            <x-form.textarea name="content">
-                {{ old('content', $post->content) }}
-            </x-form.textarea>
+            <x-form.textarea name="content">{{ old('content', $post->content) }}</x-form.textarea>
 
             <x-form.field>
                 <x-form.label name="category" />

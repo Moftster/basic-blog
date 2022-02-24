@@ -3,18 +3,18 @@
         <form action="/admin/posts" method="post" enctype="multipart/form-data">
             @csrf
 
-            <x-form.input name="title" />
+            <x-form.input name="title" required/>
 
-            <x-form.input name="slug" />
+            <x-form.input name="slug" required/>
 
-            <x-form.input name="thumbnail" type="file"/>
+            <x-form.input name="thumbnail" type="file" required/>
 
-            <x-form.textarea name="excerpt" />
+            <x-form.textarea name="excerpt" required/>
 
-            <x-form.textarea name="content" />
+            <x-form.textarea name="content" required/>
 
             <x-form.field>
-                <x-form.label name="category" />
+                <x-form.label name="category" required/>
 
                 <select name="category_id" id="category_id">
                     @foreach (\App\Models\Category::all() as $category)
